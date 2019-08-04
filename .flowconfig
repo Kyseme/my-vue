@@ -1,0 +1,15 @@
+[ignore]
+.*/node_modules/.*
+.*/test/.*
+.*/scripts/.*
+.*/examples/.*
+.*/benchmarks/.*
+
+[include]
+
+[libs]
+flow
+
+[options]
+module.name_mapper='^compiler/\(.*\)$' -> '<PROJECT_ROOT>/src/flow-test/\1'
+
