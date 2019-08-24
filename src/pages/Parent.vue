@@ -2,9 +2,12 @@
 <div>
     <!-- <child :show.sync="valueChild"></child> 
     <child :show="valueChild" @update:show="val => valueChild = val"></child> -->
-    <child :show="valueChild" @change="changeValue"></child>
+    <!-- <child :show="valueChild" @change="changeValue"></child>
+   
+    <div>{{valueChild}}</div> -->
+    <child v-model="name"></child>
+    <!-- <input :value="name" @input="name=$event.target.value"></input> -->
     <button @click="changeValue" type="button">parent</button>
-    <div>{{valueChild}}</div>
 
 </div>
 </template>
@@ -15,6 +18,7 @@ export default {
     data() {
         return {
             valueChild: true,
+            name:'sqw'
         };
     },
     components: {
@@ -22,7 +26,13 @@ export default {
     },
     methods: {
         changeValue() {
-            this.valueChild = !this.valueChild;
+            // this.valueChild = !this.valueChild;
+            console.log('parentttttt', this.name);
+        }
+    },
+    watch: {
+        name() {
+            console.log('parent-wather', this.name);
         }
     },
     created() {
