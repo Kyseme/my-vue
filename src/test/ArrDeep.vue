@@ -35,6 +35,9 @@ export default {
             this.obj[index].suggest.splice(tempIdx, 1);
             // eslint-disable-next-line
             console.log('objjjjj', this.obj[index].suggest);
+        },
+        obj() {
+            return 'jelll';
         }
     }
 };
