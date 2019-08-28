@@ -1,6 +1,11 @@
 <template>
   <div id="app">
-    <span>hellll</span>
+    <span>this is app page</span>
+      <router-link to='/parent' tag='li'><a href="/parent">parent</a></router-link>
+      <router-link to='/test' tag='li'><a href="/test">test</a></router-link>
+      <!-- <router-link to="parent" tag='li'>parent</router-link>
+      <router-link to="test" tag='li'>test</router-link> -->
+      <router-view></router-view>  
   </div>
 </template>
 <script>

@@ -1,6 +1,6 @@
 <template>
     <div>
-        {{getName}}
+        {{methodName()}}
     </div>
 </template>
 <script>
@@ -11,23 +11,21 @@ export default {
             default: 'sqw'
         }
     },
-    data() {
-        return { name: 'sunine'}
-    },
+    data() {return { dataName: 'sunine'}},
     computed:{
-        getName() {
-            console.log('get name', this.name);
-            console.log('_data.name', this._data.name);
+        computedName() {
+            console.log('_data.name', this._data.dataName);
+            return this.dataName + 'test page';
         }
     },
     methods:{
-        methodName() {
-            console.log(this.name);
-        }
-        // getName() {
-        //     console.log('hell', this.name);
-            
-        // }
+        methodName() {console.log(this.dataName);}
     }
 }
 </script>
+<style scoped>
+.active{
+    color:aquamarine;
+    font-size:32px;
+}
+</style>

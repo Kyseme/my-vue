@@ -6,9 +6,10 @@
         </div> -->
          <!-- {{value}}//child child chile
          <button @click="handleInput" type="button">按钮</button> -->
-        <input ref="input" v-model="val" type="text"  @blur="blur"></input>
+        <!-- <input ref="input" v-model="val" type="text"  @blur="blur"></input> -->
         <!-- <input ref="input" :value="val"  @input="inputChange"></input> -->
         <!-- <input :value="name" @input="name=$event.target.value"></input> -->
+        <div>parenttttt</div>
     </div>
 </template>
 <script>
@@ -19,7 +20,7 @@ export default {
     },
     data() {
         return {
-            // view: this.show,
+            view: this.show,
             val: this.value || ''
         }
     },
@@ -62,3 +63,9 @@ export default {
     }
 };
 </script>
+<style scoped>
+.child{
+    font-size: 16px;
+    background: blue;
+}
+</style>
