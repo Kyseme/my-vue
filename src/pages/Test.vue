@@ -19,7 +19,10 @@ export default {
         }
     },
     methods:{
-        methodName() {console.log(this.dataName);}
+        methodName() {console.log(this.dataName);},
+        otherMeth() {
+
+        }
     }
 }
 </script>
